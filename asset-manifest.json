@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/codechallenge/static/css/main.5b8e97a2.css",
-    "main.js": "/codechallenge/static/js/main.c8acfbf7.js",
+    "main.js": "/codechallenge/static/js/main.94edcdb7.js",
     "static/js/787.835c4676.chunk.js": "/codechallenge/static/js/787.835c4676.chunk.js",
     "index.html": "/codechallenge/index.html",
     "main.5b8e97a2.css.map": "/codechallenge/static/css/main.5b8e97a2.css.map",
-    "main.c8acfbf7.js.map": "/codechallenge/static/js/main.c8acfbf7.js.map",
+    "main.94edcdb7.js.map": "/codechallenge/static/js/main.94edcdb7.js.map",
     "787.835c4676.chunk.js.map": "/codechallenge/static/js/787.835c4676.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b8e97a2.css",
-    "static/js/main.c8acfbf7.js"
+    "static/js/main.94edcdb7.js"
   ]
 }
