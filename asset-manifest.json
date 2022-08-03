@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.5b8e97a2.css",
-    "main.js": "/static/js/main.128fcad0.js",
-    "static/js/787.835c4676.chunk.js": "/static/js/787.835c4676.chunk.js",
-    "index.html": "/index.html",
-    "main.5b8e97a2.css.map": "/static/css/main.5b8e97a2.css.map",
-    "main.128fcad0.js.map": "/static/js/main.128fcad0.js.map",
-    "787.835c4676.chunk.js.map": "/static/js/787.835c4676.chunk.js.map"
+    "main.css": "/codechallenge/static/css/main.5b8e97a2.css",
+    "main.js": "/codechallenge/static/js/main.940af73b.js",
+    "static/js/787.835c4676.chunk.js": "/codechallenge/static/js/787.835c4676.chunk.js",
+    "index.html": "/codechallenge/index.html",
+    "main.5b8e97a2.css.map": "/codechallenge/static/css/main.5b8e97a2.css.map",
+    "main.940af73b.js.map": "/codechallenge/static/js/main.940af73b.js.map",
+    "787.835c4676.chunk.js.map": "/codechallenge/static/js/787.835c4676.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b8e97a2.css",
-    "static/js/main.128fcad0.js"
+    "static/js/main.940af73b.js"
   ]
 }
