@@ -1,6 +1,9 @@
 import './Card.css'
+import useHealthStatus from '../../Hooks/useHealthStatus'
 
  const Card = (props) => {
+
+    const [healthStatus] = useHealthStatus(props.name,15)
 
     let getTime = (timeNum) => {
         let time = new Date(timeNum)
@@ -8,19 +11,18 @@ import './Card.css'
     } 
 
     return (
-        <div className={"Card " +(props.success?"healthy":"error")}>
-            <h3 className="Card__title">{props.title}</h3>
-            <h4 className="Card__subtitle ">{props.success?"Healthy":"ERROR"}</h4>
+        <div className={"Card " +(healthStatus?.success?"healthy":"error")}>
+            <h3 className="Card__title">{props.name.toString().toUpperCase()}</h3>
+            <h4 className="Card__subtitle ">{healthStatus?.success?"Healthy":"ERROR"}</h4>
             <div className='Card__contents'>
-                <p className='Card__contents__content'>{props.success?props.content:"OUTAGED"}</p>
-                {props.time && 
-                    <p>{getTime(props.time)}</p>
+                <p className='Card__contents__content'>{healthStatus?.success?healthStatus?.content:"OUTAGED"}</p>
+                {healthStatus?.time && 
+                    <p>{getTime(healthStatus?.time)}</p>
                 }
                 {
-                    !props.success && 
+                    !healthStatus?.success && 
                     <>
-                        <p>{props.content}</p>
-                        <p>{props.errorMessage}</p>
+                        <p>{healthStatus.toString()}</p>
                     </>
                     
                 }

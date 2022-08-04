@@ -9,17 +9,13 @@ import Card from '../Card/Card'
            {props.cardsArr?.map((cardData)=>{
 
                 return (
-                    <Card 
-                        title={cardData.name.toString().toUpperCase()}
-                        success={cardData.success}
-                        content = {cardData.hostname}
-                        time = {cardData.time}
-                        errorMessage = {cardData.message}
-                    />
+                    <Card name ={cardData}  />
                 )
            })}
 
         </div>
     )
 }
+
+
 export default Cards 

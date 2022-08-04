@@ -1,34 +1,47 @@
 
 import { useEffect, useState } from 'react';
-import {getAllHealthStatus} from '../Service/healthstatus'
+import {getHealthStatus} from '../Service/healthstatus'
 
 
 /* recibes an array of object of object , and optionally an int for the time between interval */
-function useHealthStatus (APIDATAS,time=0) {
+function useHealthStatus (name,time=0) {
 
-    const [healthStatus,setHealthStatus] = useState(APIDATAS)
+    const [healthStatus,setHealthStatus] = useState(
+            {
+                name:name,
+                success:"",
+                hostname:"",
+                time:"",
+                message:""
+            })
     
-    const get = async(healthStatusArr)=>{       
-        let responseArr = getAllHealthStatus(healthStatusArr)
-        setHealthStatus([...responseArr])
+    const get = async(name)=>{    
+        
+        try {
+            let response = await getHealthStatus(name)
+            setHealthStatus(response)
+            
+        } catch (error) {
+            setHealthStatus(error)
+        }
+       
+      
     }
 
     useEffect(()=>{
-
-        /* only recibes the apidata.name to itereate */
-        get(APIDATAS.map(apidata => apidata.name))
+        get(name)
 
         if(time>0){
             const interval = setInterval(() => {
-                get(healthStatus)
-            }, time*1000);
+                get(name)
+            }, (time)*1000);
     
             return () => clearInterval(interval);
         }
+
       }, []);
 
     
     return [healthStatus,setHealthStatus]
 }
-
 export default useHealthStatus
